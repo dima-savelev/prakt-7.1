@@ -21,7 +21,7 @@ namespace prakt_5
         {
             return new Rational(first.First * second.Second, second.First * first.Second);
         }
-        public  Rational Minus(Rational value)
+        public Rational Minus(Rational value)
         {
             return new Rational((First * value.Second) - (Second * value.First), Second * value.Second);
         }

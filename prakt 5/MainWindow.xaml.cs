@@ -24,9 +24,9 @@ namespace prakt_5
         {
             InitializeComponent();
         }
-        Pair pair1 = new Pair(0, 0);
-        Pair pair2 = new Pair(0, 0);
-        Pair pair3 = new Pair(0, 0);
+        Rational pair1 = new Rational(0, 0);
+        Rational pair2 = new Rational(0, 0);
+        Rational pair3 = new Rational(0, 0);
         private void Compare(object sender, RoutedEventArgs e)
         {
             firsrtPair1.Text = pair1.First.ToString();
@@ -157,17 +157,17 @@ namespace prakt_5
             }
             if (firstSelected.IsChecked == true && secondSelected.IsChecked == true && thirdSelected.IsChecked == false)
             {
-                Pair result = pair1-pair2;
+                Pair result = pair1.Minus(pair2);
                 resultMinus.Text = Convert.ToString(result.First + " , " + result.Second);
             }
             if (firstSelected.IsChecked == true && secondSelected.IsChecked == false && thirdSelected.IsChecked == true)
             {
-                Pair result = pair1-pair3;
+                Pair result = pair1.Minus(pair3);
                 resultMinus.Text = Convert.ToString(result.First + " , " + result.Second);
             }
             if (firstSelected.IsChecked == false && secondSelected.IsChecked == true && thirdSelected.IsChecked == true)
             {
-                Pair result = pair2-pair3;
+                Pair result = pair2.Minus(pair3);
                 resultMinus.Text = Convert.ToString(result.First + " , " + result.Second);
             }
             if (firstSelected.IsChecked == true && secondSelected.IsChecked == true && thirdSelected.IsChecked == true)
